@@ -1,0 +1,22 @@
+{
+  "name": "PEPEBear - The meme crypto you didn't know you needed!",
+  "short_name": "PEPEBear",
+  "description": "Cute, funny, and community-driven. HODL, laugh, and join the PEPEBear revolution!",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#9333ea",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
+
