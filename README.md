@@ -2,13 +2,29 @@
 
 Modern, interactive frontend for PEPEBear built with Next.js, React, and Web3.
 
+## About PEPEBear
+
+**PEPEBear** is a community-driven meme cryptocurrency built on the Solana blockchain. Combining the playful spirit of meme culture with innovative Web3 features, PEPEBear offers an engaging experience through gamification, phase-based development, and real-time token holder tracking.
+
+### Key Highlights
+
+- 🐻 **Community-Driven**: Join a vibrant community of holders and supporters
+- 🎮 **Gamified Experience**: Earn points, unlock achievements, and level up through participation
+- 📊 **Real-Time Analytics**: Track token holders, volume, and participation metrics live
+- 🚀 **Phase-Based Growth**: Structured development phases (Launch → Growth → Moon)
+- 💎 **Transparent & On-Chain**: Built on Solana with Anchor framework for transparency
+- 🎨 **Beautiful UI**: Modern, responsive design with smooth animations and timeline visualization
+
 ## Features
 
-- 🎨 Beautiful, interactive UI with animations
-- 🔌 Solana wallet integration (Phantom, Solflare)
+- 🎨 Beautiful, interactive UI with animations and timeline-based phase display
+- 🔌 Solana wallet integration (Phantom, Solflare, and more)
 - 🎮 Gamification elements (points, levels, achievements)
-- 📱 Responsive design
-- ⚡ Fast and optimized
+- 📊 Real-time token holder tracking with rank changes and animations
+- 📈 Live token statistics (participants, volume, rewards)
+- 📱 Fully responsive design for all devices
+- ⚡ Fast and optimized performance
+- 🎯 SEO optimized with Open Graph metadata
 
 ## Getting Started
 
@@ -47,58 +63,88 @@ npm start
 
 ```
 frontend/
-├── app/              # Next.js app directory
-│   ├── layout.tsx    # Root layout with providers
-│   ├── page.tsx      # Home page
-│   └── providers.tsx # Web3 providers
-├── components/       # React components
-│   ├── Header.tsx
-│   ├── WalletButton.tsx
-│   ├── PhaseCard.tsx
-│   ├── UserStats.tsx
-│   └── AchievementBadge.tsx
+├── app/                    # Next.js app directory
+│   ├── layout.tsx          # Root layout with providers and metadata
+│   ├── page.tsx            # Home page with phases and token holders
+│   ├── providers.tsx       # Web3 providers (Solana wallet adapter)
+│   └── globals.css         # Global styles and animations
+├── components/             # React components
+│   ├── Header.tsx          # Navigation header with logo
+│   ├── WalletButton.tsx    # Wallet connection button
+│   ├── PhaseCard.tsx       # Phase information card
+│   ├── UserStats.tsx       # User statistics display
+│   ├── AchievementBadge.tsx # Achievement badge component
+│   └── TokenHolders.tsx    # Token holder list with pagination
+├── utils/                  # Utility functions
+│   ├── tokenHolders.ts     # Token holder fetching logic
+│   └── tokenStats.ts       # Token statistics calculation
+├── public/                 # Static assets
+│   ├── logo.png           # PEPEBear logo
+│   ├── pepeBear.png       # PEPEBear mascot image
+│   ├── PEBRVideo.mp4      # Promotional video
+│   └── manifest.json      # PWA manifest
 └── package.json
 ```
 
 ## Environment Variables
 
-Create a `.env.local` file:
+Create a `.env.local` file for development:
 
 ```env
+# Solana Network (devnet or mainnet-beta)
 NEXT_PUBLIC_SOLANA_NETWORK=devnet
+
+# Solana RPC URL
+# For production, use a reliable RPC provider like Helius or QuickNode
 NEXT_PUBLIC_RPC_URL=https://api.devnet.solana.com
 
-# PEPEBear Token Mint Address (필수)
-# 실제 토큰 mint 주소를 입력하세요
-# 예: pump.fun에서 발행된 토큰의 mint 주소
+# PEPEBear Token Mint Address (Required)
+# The SPL token mint address for PEPEBear
+# Example: Token mint address from pump.fun or other DEX
 NEXT_PUBLIC_TOKEN_MINT_ADDRESS=YOUR_TOKEN_MINT_ADDRESS_HERE
 ```
 
-**중요**: `NEXT_PUBLIC_TOKEN_MINT_ADDRESS`를 설정해야 홈페이지에서 토큰 홀더 목록이 표시됩니다.
+**Important**: 
+- `NEXT_PUBLIC_TOKEN_MINT_ADDRESS` must be set for the token holder list to display on the homepage
+- For production, use a reliable RPC provider (Helius, QuickNode, etc.) as the public Solana RPC has rate limits and may restrict certain methods like `getTokenLargestAccounts`
 
 ## 🚀 Deployment
 
-### Vercel 배포
+### Deploy to Vercel
 
-1. **프로젝트 연결**
+1. **Connect Your Project**
 
-   - [Vercel](https://vercel.com)에 로그인
-   - GitHub 저장소 연결 또는 직접 업로드
-   - **Root Directory를 `frontend`로 설정**
+   - Log in to [Vercel](https://vercel.com)
+   - Connect your GitHub repository or upload directly
+   - **Set Root Directory to `frontend`**
 
-2. **환경 변수 설정**
+2. **Configure Environment Variables**
+
+   In Vercel dashboard, add these environment variables:
 
    ```
-   NEXT_PUBLIC_SOLANA_NETWORK=devnet
-   NEXT_PUBLIC_RPC_URL=https://api.devnet.solana.com
+   NEXT_PUBLIC_SOLANA_NETWORK=mainnet-beta
+   NEXT_PUBLIC_RPC_URL=https://your-rpc-provider-url.com
    NEXT_PUBLIC_TOKEN_MINT_ADDRESS=YOUR_TOKEN_MINT_ADDRESS
    ```
 
-3. **자동 배포**
-   - GitHub에 푸시하면 자동 배포
-   - 또는 `vercel` CLI 사용
+   **Production Recommendations**:
+   - Use `mainnet-beta` for `NEXT_PUBLIC_SOLANA_NETWORK`
+   - Use a reliable RPC provider URL (Helius, QuickNode, etc.) for `NEXT_PUBLIC_RPC_URL`
+   - Ensure your RPC provider supports `getTokenLargestAccounts` method
 
-자세한 내용은 [DEPLOYMENT.md](./DEPLOYMENT.md) 참고
+3. **Automatic Deployment**
+   - Push to GitHub to trigger automatic deployment
+   - Or use `vercel` CLI: `vercel --prod`
+
+### Production Checklist
+
+- [ ] Set `NEXT_PUBLIC_SOLANA_NETWORK` to `mainnet-beta`
+- [ ] Configure a reliable RPC provider URL
+- [ ] Set the correct token mint address
+- [ ] Verify token holder list displays correctly
+- [ ] Test wallet connection on production
+- [ ] Check responsive design on mobile devices
 
 ## Learn More
 
