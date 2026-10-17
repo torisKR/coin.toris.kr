@@ -1,0 +1,68 @@
+[
+  {
+    "symbol": "pebr",
+    "bytes": 3061704,
+    "triangles": 50116,
+    "clips": [
+      {
+        "name": "Idle",
+        "channels": 2,
+        "duration": 3.2
+      },
+      {
+        "name": "Action",
+        "channels": 3,
+        "duration": 2
+      }
+    ],
+    "validation": {
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    }
+  },
+  {
+    "symbol": "yeti",
+    "bytes": 3070020,
+    "triangles": 50309,
+    "clips": [
+      {
+        "name": "Idle",
+        "channels": 2,
+        "duration": 3.2
+      },
+      {
+        "name": "Action",
+        "channels": 4,
+        "duration": 2.4
+      }
+    ],
+    "validation": {
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    }
+  },
+  {
+    "symbol": "xmasr",
+    "bytes": 1957652,
+    "triangles": 30178,
+    "clips": [
+      {
+        "name": "Idle",
+        "channels": 2,
+        "duration": 3.2
+      },
+      {
+        "name": "Action",
+        "channels": 47,
+        "duration": 3
+      }
+    ],
+    "validation": {
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    }
+  }
+]

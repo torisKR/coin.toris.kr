@@ -20,7 +20,7 @@ export default async function WorldEmbed({ params }: Props) {
   const coin = findCoin((await params).symbol);
   if (!coin) notFound();
   return (
-    <main id="main" className="world-embed">
+    <main id="main" className="world-embed toris-world-site">
       <CoinWorld symbol={coin.symbol} compact />
     </main>
   );

@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "website",
       images: [
         {
-          url: coin.world.conceptPoster,
+          url: coin.world.poster,
           width: 1200,
           height: 1200,
           alt: `${coin.name} 3D world`,
@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title,
       description: coin.description,
       card: "summary_large_image",
-      images: [coin.world.conceptPoster],
+      images: [coin.world.poster],
     },
   };
 }

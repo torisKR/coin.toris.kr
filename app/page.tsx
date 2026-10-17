@@ -108,10 +108,10 @@ export default function CollectionHome() {
                     <picture>
                       <source
                         media="(max-width: 767px)"
-                        srcSet={coin.world.conceptPoster.replace(".webp", "-thumb.webp")}
+                        srcSet={coin.world.poster.replace(".png", "-thumb.webp")}
                       />
                       <Image
-                        src={coin.world.conceptPoster}
+                        src={coin.world.poster.replace(".png", ".webp")}
                         alt={`${coin.name} character world`}
                         fill
                         sizes={index === 0 ? "(max-width: 767px) 92vw, 56vw" : "(max-width: 767px) 92vw, 28vw"}

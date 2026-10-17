@@ -36,3 +36,9 @@ High-resolution concept and loading posters were created with the built-in image
 Each square concept also has a 600 by 600 `-mobile.webp` loading image and a 480 by 480 `-thumb.webp` selector image. The studio uses the 800 by 800 transparent PNG renders for its 1080 by 1080 export and smaller WebP copies for the live editor preview. These derivatives preserve the rendered composition while avoiding full-resolution downloads in the initial mobile view.
 
 These generated posters are new interpretations, not original token art and not evidence of community activity. Original Pump.fun artwork stays visible on each detail page and remains documented in `artifacts/collection-image-sources.json`.
+
+## Modeled character rebuild - October 17, 2026
+
+The rebuilt scenes replace the initial primitive models and all public model-derived images. The AI concepts under `public/worlds/concepts/` remain reference material. They no longer serve as world loading images, cards, detail artwork or coin share metadata. `world.poster` supplies the production image family.
+
+The new EEVEE scenes include a seated smiling PEBR with rattan chair and a hand-held cup, a fur-clumped expressive Yeti with a connected golf club, and an ogive alloy rocket with nozzle, swept fins, panel seams, raised star, satin ribbons and a continuous bulb cable. Each GLB includes `Idle` and `Action` clips. Surface normal textures are baked from deterministic authored height fields, not sourced from third-party images. Transparent PNG poses are now 1080 by 1080; the share artwork is composited from these same model renders. See `docs/WORLD-REBUILD.md` for regeneration, MCP setup and verification details.

@@ -70,11 +70,11 @@ export function CollectionGallery() {
               <picture>
                 <source
                   media="(max-width: 767px)"
-                  srcSet={coin.world.conceptPoster.replace(".webp", "-mobile.webp")}
+                  srcSet={coin.world.poster.replace(".png", "-mobile.webp")}
                 />
                 <img
                   className="coin-world-poster"
-                  src={coin.world.conceptPoster.replace(".webp", "-mobile.webp")}
+                  src={coin.world.poster.replace(".png", "-mobile.webp")}
                   alt={`${coin.name} art-toy world poster`}
                   width={800}
                   height={800}
@@ -113,7 +113,7 @@ export function CollectionGallery() {
             }}
           >
             <Image
-              src={item.world.conceptPoster.replace(".webp", "-thumb.webp")}
+              src={item.world.poster.replace(".png", "-thumb.webp")}
               alt=""
               width={56}
               height={56}

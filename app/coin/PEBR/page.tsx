@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: coin.world.conceptPoster,
+        url: coin.world.poster,
         width: 1200,
         height: 1200,
         alt: "PEPEBear coffee garden world",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "PEPEBear (PEBR) 3D World",
     description: coin.description,
-    images: [coin.world.conceptPoster],
+    images: [coin.world.poster],
   },
 };
 

@@ -87,8 +87,8 @@ export function CoinDetailPage({ coin }: { coin: Coin }) {
           <CollectionReveal className="world-story-grid">
             <div className="world-story-poster">
               <Image
-                src={coin.world.conceptPoster}
-                alt={`${coin.name} world concept poster`}
+                src={coin.world.poster.replace(".png", ".webp")}
+                alt={`${coin.name} rendered character world`}
                 fill
                 sizes="(max-width: 767px) 92vw, 48vw"
               />
@@ -142,7 +142,7 @@ export function CoinDetailPage({ coin }: { coin: Coin }) {
           <div>
             {coins.filter((item) => item.symbol !== coin.symbol).map((item) => (
               <Link key={item.symbol} href={coinPath(item.symbol)}>
-                <Image src={item.world.conceptPoster} alt="" width={120} height={120} />
+                <Image src={item.world.poster.replace(".png", "-thumb.webp")} alt="" width={120} height={120} />
                 <span><strong>{item.name}</strong><small>${item.symbol}</small></span>
                 <Arrow />
               </Link>
