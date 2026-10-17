@@ -1,0 +1,82 @@
+{
+  "base": "https://coin.toris.kr",
+  "at": "2026-10-17T03:32:56.902Z",
+  "checks": {
+    "noAnalyticsBeforeConsent": true,
+    "initialPageViewExactlyOnce": true,
+    "selectedCoinParametersAndAcceptedTransport": true
+  },
+  "events": [
+    {
+      "name": "page_view",
+      "measurementId": "G-ZXLWF2WZ3H",
+      "page": "https://coin.toris.kr/",
+      "coin": null,
+      "status": 204
+    },
+    {
+      "name": "coin_selected",
+      "measurementId": "G-ZXLWF2WZ3H",
+      "page": "https://coin.toris.kr/",
+      "coin": "YETI",
+      "status": 204
+    },
+    {
+      "name": "page_view",
+      "measurementId": "G-ZXLWF2WZ3H",
+      "page": "https://coin.toris.kr/coin/YETI",
+      "coin": null,
+      "status": 204
+    },
+    {
+      "name": "coin_viewed",
+      "measurementId": "G-ZXLWF2WZ3H",
+      "page": "https://coin.toris.kr/coin/YETI",
+      "coin": "YETI",
+      "status": 204
+    },
+    {
+      "name": "mint_copied",
+      "measurementId": "G-ZXLWF2WZ3H",
+      "page": "https://coin.toris.kr/coin/YETI",
+      "coin": "YETI",
+      "status": 204
+    },
+    {
+      "name": "page_view",
+      "measurementId": "G-ZXLWF2WZ3H",
+      "page": "https://coin.toris.kr/studio",
+      "coin": null,
+      "status": 204
+    },
+    {
+      "name": "scroll",
+      "measurementId": "G-ZXLWF2WZ3H",
+      "page": "https://coin.toris.kr/studio?coin=XMASR",
+      "coin": null,
+      "status": 204
+    },
+    {
+      "name": "meme_downloaded",
+      "measurementId": "G-ZXLWF2WZ3H",
+      "page": "https://coin.toris.kr/studio?coin=XMASR",
+      "coin": "XMASR",
+      "status": 204
+    },
+    {
+      "name": "meme_share_opened",
+      "measurementId": "G-ZXLWF2WZ3H",
+      "page": "https://coin.toris.kr/studio?coin=XMASR",
+      "coin": "XMASR",
+      "status": 204
+    },
+    {
+      "name": "outbound_link_clicked",
+      "measurementId": "G-ZXLWF2WZ3H",
+      "page": "https://coin.toris.kr/studio?coin=XMASR",
+      "coin": null,
+      "status": 204
+    }
+  ],
+  "failures": []
+}

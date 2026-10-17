@@ -19,11 +19,11 @@ Each world has an editable Blender source, a web GLB, a rendered poster, three t
 
 ## Local verification
 
-`artifacts/world-qa.json` records the final production-build browser run. It covers eight content routes, 360, 390, 768, and 1440 pixel widths, one H1 per route, horizontal overflow, axe WCAG 2 and 2.1 A/AA checks, single-world loading, keyboard selection, each character action, studio coin switching, 1080 PNG export, legacy query compatibility, mobile poster-first behavior, and reduced motion. The run completed without uncaught page errors or automated accessibility violations.
+`artifacts/world-qa.json` records the final public-site browser run against `https://coin.toris.kr`. It covers eight content routes, 360, 390, 768, and 1440 pixel widths, one H1 per route, horizontal overflow, axe WCAG 2 and 2.1 A/AA checks, single-world loading, keyboard selection, each character action, studio coin switching, 1080 PNG export, legacy query compatibility, mobile poster-first behavior, and reduced motion. The run completed without uncaught page errors or automated accessibility violations.
 
 `npm run build:cloudflare` passed with all 19 static routes generated. ESLint passed with zero errors and one pre-existing unused-disable warning in `components/TokenHolders.tsx`, which is outside the new collection path.
 
-Local mobile Lighthouse on the uncompressed preview server recorded Performance 82, Accessibility 100, Best Practices 100, and SEO 100. FCP and LCP were 3.6 seconds, TBT 20 ms, and CLS 0. The performance target must be evaluated again on Cloudflare, where static assets are compressed; this local score is not represented as a production pass or field Core Web Vitals evidence.
+Local mobile Lighthouse on the uncompressed preview server recorded Performance 82. The final public Cloudflare run recorded Performance 96, Accessibility 100, Best Practices 100, and SEO 100. FCP was 2.0 seconds, LCP 2.3 seconds, TBT 10 ms, and CLS 0. This exceeds the 90-point lab target but does not establish field Core Web Vitals compliance.
 
 ## Release evidence
 
