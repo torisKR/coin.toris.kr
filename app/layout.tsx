@@ -1,83 +1,44 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Providers } from "./providers";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import { SiteAnalytics } from "@/components/SiteAnalytics";
+import { SITE_URL } from "@/utils/site";
 
 export const metadata: Metadata = {
-  title: "PEPEBear - The meme crypto you didn't know you needed!",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "Toris Coin | The Meme Coin Collection",
+    template: "%s | Toris Coin",
+  },
   description:
-    "Cute, funny, and community-driven. HODL, laugh, and join the PEPEBear revolution! Built on Solana blockchain.",
-  keywords: [
-    "PEPEBear",
-    "meme coin",
-    "Solana",
-    "crypto",
-    "blockchain",
-    "PEPE",
-    "bear",
-    "token",
-    "DeFi",
-  ],
-  authors: [{ name: "PEPEBear Team" }],
-  creator: "PEPEBear",
-  publisher: "PEPEBear",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "https://pepebear.vercel.app"
-  ),
-  alternates: {
-    canonical: "/",
-  },
+    "Discover the Toris Coin collection: PEPEBear (PEBR), Yeti (YETI), and XMasRocket (XMASR). Explore three Solana meme coins from one creator.",
+  applicationName: "Toris Coin",
+  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: process.env.NEXT_PUBLIC_SITE_URL || "https://pepebear.vercel.app",
-    title: "PEPEBear - The meme crypto you didn't know you needed!",
+    siteName: "Toris Coin",
+    title: "Toris Coin | Three characters. Three worlds.",
     description:
-      "Cute, funny, and community-driven. HODL, laugh, and join the PEPEBear revolution! Built on Solana blockchain.",
-    siteName: "PEPEBear",
+      "Discover the Toris Coin collection: PEPEBear (PEBR), Yeti (YETI), and XMasRocket (XMASR). Explore three Solana meme coins from one creator.",
+    url: SITE_URL,
     images: [
       {
-        url: "/pepeBear.png",
+        url: "/worlds/toris-coin-og.webp",
         width: 1200,
         height: 630,
-        alt: "PEPEBear Logo",
+        alt: "PEPEBear, Yeti, and XMasRocket in the Toris Coin character worlds",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "PEPEBear - The meme crypto you didn't know you needed!",
+    creator: "@toris_kr",
+    title: "Toris Coin | Three characters. Three worlds.",
     description:
-      "Cute, funny, and community-driven. HODL, laugh, and join the PEPEBear revolution!",
-    images: ["/pepeBear.png"],
-    creator: "@PEBR_Coin",
+      "Discover the Toris Coin collection: PEPEBear (PEBR), Yeti (YETI), and XMasRocket (XMASR). Explore three Solana meme coins from one creator.",
+    images: ["/worlds/toris-coin-og.webp"],
   },
-  icons: {
-    icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/logo.png", sizes: "32x32", type: "image/png" },
-      { url: "/logo.png", sizes: "16x16", type: "image/png" },
-    ],
-    apple: [
-      { url: "/logo.png", sizes: "180x180", type: "image/png" },
-    ],
-    shortcut: "/favicon.ico",
-  },
+  icons: { icon: "/brand-mark.svg", apple: "/brand-mark.png" },
   manifest: "/manifest.json",
   robots: {
     index: true,
@@ -85,24 +46,22 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      "max-video-preview": -1,
       "max-image-preview": "large",
       "max-snippet": -1,
     },
   },
 };
-
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <Providers>{children}</Providers>
+      <body>
+        <a href="#main" className="skip-link">
+          Skip to content
+        </a>
+        {children}
+        <SiteAnalytics />
       </body>
     </html>
   );

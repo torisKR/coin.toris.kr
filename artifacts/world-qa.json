@@ -1,0 +1,65 @@
+{
+  "base": "http://localhost:3002",
+  "at": "2026-10-17T03:29:55.177Z",
+  "pages": [
+    {
+      "route": "/",
+      "status": 200,
+      "title": "Toris Coin | Three Characters, Three 3D Worlds",
+      "accessibility": []
+    },
+    {
+      "route": "/coin/PEBR",
+      "status": 200,
+      "title": "PEPEBear (PEBR) 3D World | Toris Coin",
+      "accessibility": []
+    },
+    {
+      "route": "/coin/YETI",
+      "status": 200,
+      "title": "Yeti (YETI) 3D World | Toris Coin",
+      "accessibility": []
+    },
+    {
+      "route": "/coin/XMASR",
+      "status": 200,
+      "title": "XMasRocket (XMASR) 3D World | Toris Coin",
+      "accessibility": []
+    },
+    {
+      "route": "/studio?coin=YETI",
+      "status": 200,
+      "title": "Toris Coin Studio | Create a PEBR, YETI or XMASR Meme",
+      "accessibility": []
+    },
+    {
+      "route": "/coin/PEBR/memes?template=coffee",
+      "status": 200,
+      "title": "PEPEBear Meme Maker | Toris Coin Studio",
+      "accessibility": []
+    },
+    {
+      "route": "/coin/PEBR/token",
+      "status": 200,
+      "title": "PEBR Token Facts & Solana Mint Address | Toris Coin",
+      "accessibility": []
+    },
+    {
+      "route": "/privacy",
+      "status": 200,
+      "title": "Privacy & Optional Analytics | Toris Coin",
+      "accessibility": []
+    }
+  ],
+  "checks": {
+    "singleSelectedWorldRenderer": true,
+    "keyboardWorldSelection": true,
+    "characterActionAndKeyboardTurn": true,
+    "allCharacterActions": true,
+    "threeCoinStudioAnd1080Export": true,
+    "legacyTemplateCompatibility": true,
+    "mobilePosterFirstAndOptIn3D": true,
+    "reducedMotionStartsPaused": true
+  },
+  "errors": []
+}

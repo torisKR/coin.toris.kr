@@ -1,0 +1,26 @@
+[
+  {
+    "symbol": "PEBR",
+    "width": 256,
+    "height": 256,
+    "source": "https://images.pump.fun/coin-image/7Ndrtiq37uU48cua8VVry31ygZPTAJSWwtCDhHBnpump?variant=256x256&ipfs=bafybeigu3ywovfdqhojcob3bucf4q3q47ednca4ijnphzwrnjobnvukfxa&src=https%3A%2F%2Fipfs.io%2Fipfs%2Fbafybeigu3ywovfdqhojcob3bucf4q3q47ednca4ijnphzwrnjobnvukfxa",
+    "observed": "2026-10-15",
+    "output": "public/coins/PEBR.webp"
+  },
+  {
+    "symbol": "YETI",
+    "width": 256,
+    "height": 256,
+    "source": "https://images.pump.fun/coin-image/CGevbJ3ceVXjSCnSZJjjoK1Lpx5u1vrg3BYj8kRvpump?variant=256x256&ipfs=bafybeigqoo7uqis6f3qqehnl72mnreac42pjqqxbhlatxdsd4lmodvpsci&src=https%3A%2F%2Fipfs.io%2Fipfs%2Fbafybeigqoo7uqis6f3qqehnl72mnreac42pjqqxbhlatxdsd4lmodvpsci",
+    "observed": "2026-10-15",
+    "output": "public/coins/YETI.webp"
+  },
+  {
+    "symbol": "XMASR",
+    "width": 512,
+    "height": 512,
+    "source": "https://images.pump.fun/coin-image/6HHVy15ixQudWkgv8fRW8w4pHbqBgdVEAqbVxZN7pump?variant=512x512&ipfs=bafybeidzodv5ateyvdysdydcz2x2nswj5bpax7yvkuwescrgrvnwyk4p54&src=https%3A%2F%2Fipfs.io%2Fipfs%2Fbafybeidzodv5ateyvdysdydcz2x2nswj5bpax7yvkuwescrgrvnwyk4p54",
+    "observed": "2026-10-15",
+    "output": "public/coins/XMASR.webp"
+  }
+]

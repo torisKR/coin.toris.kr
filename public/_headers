@@ -1,0 +1,17 @@
+/llms.txt
+  Content-Type: text/plain; charset=utf-8
+/token-facts.md
+  Content-Type: text/markdown; charset=utf-8
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+/opengraph-image
+  Content-Type: image/png
+/twitter-image
+  Content-Type: image/png
+/coin/PEBR/opengraph-image
+  Content-Type: image/png
+/coin/PEBR/twitter-image
+  Content-Type: image/png

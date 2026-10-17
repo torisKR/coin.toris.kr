@@ -1,12 +1,14 @@
 {
-  "name": "frontend",
+  "name": "coin.toris.kr",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "build:cloudflare": "next build && node scripts/build-cloudflare.mjs",
+    "deploy:cloudflare": "npm run build:cloudflare && cf deploy --prebuilt --mode production"
   },
   "dependencies": {
     "@coral-xyz/anchor": "^0.32.1",
@@ -18,18 +20,24 @@
     "@solana/web3.js": "^1.98.4",
     "framer-motion": "^12.23.24",
     "lucide-react": "^0.555.0",
-    "next": "16.0.4",
-    "react": "19.2.0",
-    "react-dom": "19.2.0"
+    "next": "16.4.1",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "three": "0.186.1"
   },
   "devDependencies": {
+    "@cloudflare/build-output-utils": "0.9.2",
+    "@cloudflare/config": "0.23.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/three": "0.186.0",
+    "cf": "1.0.0-beta.14",
     "eslint": "^9",
-    "eslint-config-next": "16.0.4",
+    "eslint-config-next": "16.4.1",
     "tailwindcss": "^4",
     "typescript": "^5"
-  }
+  },
+  "type": "module"
 }

@@ -1,153 +1,82 @@
-# PEPEBear Frontend
+# Toris Coin
 
-Modern, interactive frontend for PEPEBear built with Next.js, React, and Web3.
+The source for [coin.toris.kr](https://coin.toris.kr), an English art-toy collection for PEPEBear (PEBR), Yeti (YETI), and XMasRocket (XMASR).
 
-## About PEPEBear
+Each coin has an interactive Three.js world backed by an editable Blender file and a web-ready GLB. Toris Coin Studio combines all three characters in one browser-only meme editor with 1080 by 1080 PNG export.
 
-**PEPEBear** is a community-driven meme cryptocurrency built on the Solana blockchain. Combining the playful spirit of meme culture with innovative Web3 features, PEPEBear offers an engaging experience through gamification, phase-based development, and real-time token holder tracking.
+![Toris Coin collection](public/worlds/toris-coin-og.webp)
 
-### Key Highlights
+## Routes
 
-- 🐻 **Community-Driven**: Join a vibrant community of holders and supporters
-- 🎮 **Gamified Experience**: Earn points, unlock achievements, and level up through participation
-- 📊 **Real-Time Analytics**: Track token holders, volume, and participation metrics live
-- 🚀 **Phase-Based Growth**: Structured development phases (Launch → Growth → Moon)
-- 💎 **Transparent & On-Chain**: Built on Solana with Anchor framework for transparency
-- 🎨 **Beautiful UI**: Modern, responsive design with smooth animations and timeline visualization
+- `/` - selectable collection viewer; only the active GLB is loaded.
+- `/coin/PEBR` - green bear coffee garden and cup-raise action.
+- `/coin/YETI` - snow golf world, swing action, and moving green ball.
+- `/coin/XMASR` - Christmas launch pad, lights, ignition, and lift action.
+- `/studio?coin=YETI` - shared coin, pose, background, caption, and PNG editor.
+- `/coin/PEBR/memes?template=coffee` - retained legacy route and template link.
+- `/coin/PEBR/token` - retained PEBR facts and risk information.
+- `/privacy` - optional analytics settings and data-use explanation.
 
-## Features
+The detail pages retain the original token artwork, exact mint address, Pump.fun source, Solscan record, and creator profile. The site does not present live price or liquidity data.
 
-- 🎨 Beautiful, interactive UI with animations and timeline-based phase display
-- 🔌 Solana wallet integration (Phantom, Solflare, and more)
-- 🎮 Gamification elements (points, levels, achievements)
-- 📊 Real-time token holder tracking with rank changes and animations
-- 📈 Live token statistics (participants, volume, rewards)
-- 📱 Fully responsive design for all devices
-- ⚡ Fast and optimized performance
-- 🎯 SEO optimized with Open Graph metadata
+## Run locally
 
-## Getting Started
-
-### Installation
-
-```bash
+```sh
 npm install
-```
-
-### Development
-
-```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Then open `http://localhost:3000`. Production checks:
 
-### Build
-
-```bash
-npm run build
-npm start
+```sh
+npm run lint
+npm run build:cloudflare
 ```
 
-## Tech Stack
+## Build and deploy to Cloudflare
 
-- **Next.js 16** - React framework
-- **React 19** - UI library
-- **TypeScript** - Type safety
-- **Tailwind CSS** - Styling
-- **Framer Motion** - Animations
-- **Solana Wallet Adapter** - Web3 integration
-- **Lucide React** - Icons
+This project has no Wrangler configuration. Use the `cf` CLI:
 
-## Project Structure
-
-```
-frontend/
-├── app/                    # Next.js app directory
-│   ├── layout.tsx          # Root layout with providers and metadata
-│   ├── page.tsx            # Home page with phases and token holders
-│   ├── providers.tsx       # Web3 providers (Solana wallet adapter)
-│   └── globals.css         # Global styles and animations
-├── components/             # React components
-│   ├── Header.tsx          # Navigation header with logo
-│   ├── WalletButton.tsx    # Wallet connection button
-│   ├── PhaseCard.tsx       # Phase information card
-│   ├── UserStats.tsx       # User statistics display
-│   ├── AchievementBadge.tsx # Achievement badge component
-│   └── TokenHolders.tsx    # Token holder list with pagination
-├── utils/                  # Utility functions
-│   ├── tokenHolders.ts     # Token holder fetching logic
-│   └── tokenStats.ts       # Token statistics calculation
-├── public/                 # Static assets
-│   ├── logo.png           # PEPEBear logo
-│   ├── pepeBear.png       # PEPEBear mascot image
-│   ├── PEBRVideo.mp4      # Promotional video
-│   └── manifest.json      # PWA manifest
-└── package.json
+```sh
+cf deploy --prebuilt --mode production --dry-run
+cf deploy --prebuilt --mode production
 ```
 
-## Environment Variables
+`cloudflare.config.ts` keeps the existing Worker and `coin.toris.kr` custom-domain configuration separate from the GitHub repository name. `.cloudflare/` is generated output and is not committed.
 
-Create a `.env.local` file for development:
+## Regenerate 3D assets
 
-```env
-# Solana Network (devnet or mainnet-beta)
-NEXT_PUBLIC_SOLANA_NETWORK=devnet
+Blender 5.1 or later can rebuild the editable scenes, GLBs, model posters, and three transparent poses per coin:
 
-# Solana RPC URL
-# For production, use a reliable RPC provider like Helius or QuickNode
-NEXT_PUBLIC_RPC_URL=https://api.devnet.solana.com
-
-# PEPEBear Token Mint Address (Required)
-# The SPL token mint address for PEPEBear
-# Example: Token mint address from pump.fun or other DEX
-NEXT_PUBLIC_TOKEN_MINT_ADDRESS=YOUR_TOKEN_MINT_ADDRESS_HERE
+```sh
+blender --background --python scripts/build_toris_worlds.py
 ```
 
-**Important**: 
-- `NEXT_PUBLIC_TOKEN_MINT_ADDRESS` must be set for the token holder list to display on the homepage
-- For production, use a reliable RPC provider (Helius, QuickNode, etc.) as the public Solana RPC has rate limits and may restrict certain methods like `getTokenLargestAccounts`
+Outputs:
 
-## 🚀 Deployment
+- Editable sources: `assets/blender/*-world.blend`
+- Web models: `public/worlds/*-world.glb`
+- Model posters: `public/worlds/*-poster.png`
+- Transparent poses: `public/worlds/poses/*.png`
 
-### Deploy to Vercel
+The source script uses Blender primitives and named action objects (`CharacterRoot`, `ActionPivot`, and `ActionBall`). `components/CoinWorld.tsx` uses those names for the browser interactions. Keep them stable when editing the models.
 
-1. **Connect Your Project**
+The high-resolution concept posters in `public/worlds/concepts/` were generated from the original token artwork and are used as immediate mobile/loading fallbacks. See [asset provenance](docs/ASSET-PROVENANCE.md) for prompts, dimensions, and generation notes.
 
-   - Log in to [Vercel](https://vercel.com)
-   - Connect your GitHub repository or upload directly
-   - **Set Root Directory to `frontend`**
+## Add a coin
 
-2. **Configure Environment Variables**
+1. Extend `CoinSymbol` and add the verified identity, original art, world files, three poses, and three studio backgrounds in `utils/coins.ts`.
+2. Add a Blender builder to `scripts/build_toris_worlds.py` with the same named interaction objects.
+3. Rebuild the assets and update the provenance document.
+4. Confirm the static detail route, sitemap, `llms.txt`, studio export, analytics `coin_symbol`, and both light and dark presentation.
 
-   In Vercel dashboard, add these environment variables:
+The collection, detail navigation, sitemap, metadata, studio, and analytics all read from the same coin registry.
 
-   ```
-   NEXT_PUBLIC_SOLANA_NETWORK=mainnet-beta
-   NEXT_PUBLIC_RPC_URL=https://your-rpc-provider-url.com
-   NEXT_PUBLIC_TOKEN_MINT_ADDRESS=YOUR_TOKEN_MINT_ADDRESS
-   ```
+## Analytics and verification
 
-   **Production Recommendations**:
-   - Use `mainnet-beta` for `NEXT_PUBLIC_SOLANA_NETWORK`
-   - Use a reliable RPC provider URL (Helius, QuickNode, etc.) for `NEXT_PUBLIC_RPC_URL`
-   - Ensure your RPC provider supports `getTokenLargestAccounts` method
+- [Analytics plan](docs/ANALYTICS-PLAN.md) documents consent and GA4 events.
+- [Asset provenance](docs/ASSET-PROVENANCE.md) distinguishes original token images, generated concepts, and Blender outputs.
+- [Collection release notes](docs/COLLECTION-RELEASE.md) record browser and deployment checks.
+- `artifacts/world-verify.mjs` is the Playwright and axe verification harness.
 
-3. **Automatic Deployment**
-   - Push to GitHub to trigger automatic deployment
-   - Or use `vercel` CLI: `vercel --prod`
-
-### Production Checklist
-
-- [ ] Set `NEXT_PUBLIC_SOLANA_NETWORK` to `mainnet-beta`
-- [ ] Configure a reliable RPC provider URL
-- [ ] Set the correct token mint address
-- [ ] Verify token holder list displays correctly
-- [ ] Test wallet connection on production
-- [ ] Check responsive design on mobile devices
-
-## Learn More
-
-- [Next.js Documentation](https://nextjs.org/docs)
-- [Solana Wallet Adapter](https://github.com/solana-labs/wallet-adapter)
-- [Anchor Framework](https://www.anchor-lang.com/)
+GA4 property `coin` uses measurement ID `G-ZXLWF2WZ3H` only on the public production hostname and only after permission. Existing event names are preserved; studio download and X-draft events record the selected `coin_symbol`.

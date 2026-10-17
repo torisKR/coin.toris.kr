@@ -1,0 +1,12 @@
+/PEBR /coin/PEBR 301
+/PEBR/* /coin/PEBR/:splat 301
+/pebr /coin/PEBR 301
+/pebr/* /coin/PEBR/:splat 301
+/token /coin/PEBR/token 301
+/memes /coin/PEBR/memes 301
+/YETI /coin/YETI 301
+/XMASR /coin/XMASR 301
+/coin/pebr /coin/PEBR 301
+/coin/pebr/* /coin/PEBR/:splat 301
+/coin/yeti /coin/YETI 301
+/coin/xmasr /coin/XMASR 301
