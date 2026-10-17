@@ -1,0 +1,51 @@
+{
+  "base": "https://coin.toris.kr",
+  "at": "2026-10-17T04:11:15.220Z",
+  "pages": [
+    {
+      "route": "/",
+      "axe": []
+    },
+    {
+      "route": "/coin/PEBR",
+      "axe": []
+    },
+    {
+      "route": "/coin/YETI",
+      "axe": []
+    },
+    {
+      "route": "/coin/XMASR",
+      "axe": []
+    },
+    {
+      "route": "/studio?coin=YETI",
+      "axe": []
+    },
+    {
+      "route": "/coin/PEBR/memes?template=coffee",
+      "axe": []
+    },
+    {
+      "route": "/coin/PEBR/token",
+      "axe": []
+    },
+    {
+      "route": "/privacy",
+      "axe": []
+    }
+  ],
+  "checks": {
+    "PEBRActionPauseDragKeyboard": true,
+    "YETIActionPauseDragKeyboard": true,
+    "offscreenAnimationSuspended": true,
+    "XMASRActionPauseDragKeyboard": true,
+    "oneSelectedRendererAfterNineSwitches": true,
+    "three1080PngExports": true,
+    "mobilePosterOptInTouchDragAndTap": true,
+    "failedModelPoster": true,
+    "contextLossDisposesRendererAndShowsPoster": true,
+    "reducedMotionStartsPaused": true
+  },
+  "errors": []
+}

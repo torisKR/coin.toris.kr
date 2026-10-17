@@ -1,0 +1,19 @@
+{
+  "url": "https://coin.toris.kr/",
+  "fetchedAt": "2026-10-17T04:11:18.341Z",
+  "version": "13.5.0",
+  "scores": {
+    "performance": 94,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100,
+    "agentic-browsing": 100
+  },
+  "metrics": {
+    "first-contentful-paint": "1.6 s",
+    "largest-contentful-paint": "2.9 s",
+    "total-blocking-time": "0 ms",
+    "cumulative-layout-shift": "0",
+    "speed-index": "1.6 s"
+  }
+}

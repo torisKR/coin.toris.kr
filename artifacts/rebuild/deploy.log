@@ -1,0 +1,112 @@
+├  Deploy
+│  🌀 Building list of assets...
+│  ✨ Read 180 files from the assets directory /private/tmp/pepebear-world-release/.cloudflare/output/v0/workers/default/assets
+│  🌀 Starting asset upload...
+│  🌀 Found 94 new or modified static assets to upload. Proceeding with upload...
+│  + /__next._tree.txt
+│  + /_not-found/__next._tree.txt
+│  + /embed/YETI/__next._tree.txt
+│  + /coin/PEBR/token/__next._tree.txt
+│  + /_next/static/chunks/1hrw4ivx3gwom.js
+│  + /embed/YETI/__next.embed.$d$symbol.__PAGE__.txt
+│  + /embed/PEBR.txt
+│  + /_not-found.txt
+│  + /worlds/textures/woven-linen-normal.png
+│  + /coin/PEBR/memes.txt
+│  + /embed/YETI.html
+│  + /404.html
+│  + /coin/PEBR/__next.coin.PEBR.__PAGE__.txt
+│  + /coin/XMASR/__next.coin.$d$symbol.__PAGE__.txt
+│  + /coin/YETI.txt
+│  + /studio.html
+│  + /worlds/yeti-poster-thumb.webp
+│  + /_next/static/chunks/0fr2r0ki3epxl.js
+│  + /coin/PEBR.html
+│  + /worlds/poses/xmasr-1.webp
+│  + /worlds/xmasr-poster-mobile.webp
+│  + /worlds/poses/yeti-3.webp
+│  + /worlds/poses/pebr-1.webp
+│  + /worlds/toris-coin-og.webp
+│  + /worlds/pebr-poster.webp
+│  + /worlds/textures/fur-fibres-normal.png
+│  + /worlds/textures/rattan-grain-normal.png
+│  + /worlds/poses/xmasr-3.png
+│  + /worlds/poses/yeti-3.png
+│  + /worlds/poses/pebr-2.png
+│  + /worlds/pebr-poster.png
+│  + /worlds/yeti-world.glb
+│  + /studio/__next._tree.txt
+│  + /coin/PEBR/__next._tree.txt
+│  + /embed/XMASR/__next._tree.txt
+│  + /coin/YETI/__next._tree.txt
+│  + /_next/static/chunks/0bifxz4-e35rh.js
+│  + /embed/XMASR/__next.embed.$d$symbol.__PAGE__.txt
+│  + /embed/YETI.txt
+│  + /studio/__next.studio.__PAGE__.txt
+│  + /studio.txt
+│  + /privacy.txt
+│  + /embed/PEBR.html
+│  + /coin/PEBR/token/__next.coin.PEBR.token.__PAGE__.txt
+│  + /__next.__PAGE__.txt
+│  + /__next._full.txt
+│  + /coin/XMASR.txt
+│  + /coin/PEBR/memes.html
+│  + /worlds/xmasr-poster-thumb.webp
+│  + /worlds/pebr-poster-thumb.webp
+│  + /coin/YETI.html
+│  + /index.html
+│  + /worlds/poses/yeti-2.webp
+│  + /worlds/poses/xmasr-3.webp
+│  + /worlds/poses/pebr-2.webp
+│  + /worlds/yeti-poster.webp
+│  + /worlds/textures/golf-dimples-normal.png
+│  + /worlds/textures/brushed-alloy-normal.png
+│  + /worlds/poses/xmasr-1.png
+│  + /worlds/poses/yeti-1.png
+│  + /worlds/poses/pebr-1.png
+│  + /worlds/yeti-poster.png
+│  + /worlds/xmasr-world.glb
+│  + /privacy/__next._tree.txt
+│  + /embed/PEBR/__next._tree.txt
+│  + /coin/PEBR/memes/__next._tree.txt
+│  + /coin/XMASR/__next._tree.txt
+│  + /embed/PEBR/__next.embed.$d$symbol.__PAGE__.txt
+│  + /_not-found/__next._not-found.__PAGE__.txt
+│  + /embed/XMASR.txt
+│  + /coin/PEBR/memes/__next.coin.PEBR.memes.__PAGE__.txt
+│  + /privacy/__next.privacy.__PAGE__.txt
+│  + /_next/static/chunks/1plvomtv0wr2-.js
+│  + /embed/XMASR.html
+│  + /coin/PEBR/token.txt
+│  + /coin/YETI/__next.coin.$d$symbol.__PAGE__.txt
+│  + /coin/PEBR.txt
+│  + /privacy.html
+│  + /_next/static/chunks/429a-6p6-2wb8.js
+│  + /coin/PEBR/token.html
+│  + /worlds/yeti-poster-mobile.webp
+│  + /coin/XMASR.html
+│  + /worlds/poses/xmasr-2.webp
+│  + /worlds/poses/yeti-1.webp
+│  + /worlds/pebr-poster-mobile.webp
+│  + /worlds/poses/pebr-3.webp
+│  + /worlds/xmasr-poster.webp
+│  + /_next/static/chunks/0apu-n6_j2h_z.css
+│  + /worlds/textures/snow-grain-normal.png
+│  + /worlds/poses/xmasr-2.png
+│  + /worlds/poses/yeti-2.png
+│  + /worlds/poses/pebr-3.png
+│  + /worlds/xmasr-poster.png
+│  + /worlds/pebr-world.glb
+│  Uploaded 32 of 94 assets
+│  Uploaded 63 of 94 assets
+│  Uploaded 94 of 94 assets
+│  ✨ Success! Uploaded 94 files (60 already uploaded) (5.48 sec)
+│
+│  Total Upload: 0.00 KiB / gzip: 0.02 KiB
+│  Uploaded toris-coin (8.35 sec)
+│  Deployed toris-coin triggers (2.14 sec)
+│    coin.toris.kr/* (zone name: toris.kr)
+│    coin.toris.kr (custom domain)
+│  Current Version ID: 5df1a578-280d-4619-8f77-b7eb7ccdbcee
+│
+◆  Deploy complete

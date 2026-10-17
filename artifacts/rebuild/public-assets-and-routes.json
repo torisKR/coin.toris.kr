@@ -1,0 +1,107 @@
+[
+  {
+    "name": "pebr-world.glb",
+    "status": 200,
+    "bytes": 3061704,
+    "sha256": "ffd895ea70861359ae3e4e75dd5c82ad74aad1fc21ccf67435b381ddc96ab11f",
+    "match": true
+  },
+  {
+    "name": "yeti-world.glb",
+    "status": 200,
+    "bytes": 3070020,
+    "sha256": "db71b956bb6f571e9842e48481a0b39ec5466ec57a40311a2d251f08fe493d9f",
+    "match": true
+  },
+  {
+    "name": "xmasr-world.glb",
+    "status": 200,
+    "bytes": 1957652,
+    "sha256": "ebd71ff4751f1a7fbd105d90f57495c42c25c706f9eda53e0d88679a692cadfe",
+    "match": true
+  },
+  {
+    "name": "pebr-poster-mobile.webp",
+    "status": 200,
+    "bytes": 36576,
+    "sha256": "480856acbd88bb447e57046bf015961c8d2669e8b44d1ebc1349ffcca6f1497f",
+    "match": true
+  },
+  {
+    "name": "yeti-poster-mobile.webp",
+    "status": 200,
+    "bytes": 28740,
+    "sha256": "cc253426e8924a11823beddc7e6ca901cbf373f004817913dd2051e7eb372eeb",
+    "match": true
+  },
+  {
+    "name": "xmasr-poster-mobile.webp",
+    "status": 200,
+    "bytes": 32168,
+    "sha256": "79ee1fbb33915930d411bc019c78b73d6cf949e31a8862bffea3b1356dc2c066",
+    "match": true
+  },
+  {
+    "name": "poses/pebr-3.png",
+    "status": 200,
+    "bytes": 850717,
+    "sha256": "4a69c2c8d99ff2e93d573173db6b070f2643b3247b39aacc418bc7af9b42db64",
+    "match": true
+  },
+  {
+    "name": "poses/yeti-3.png",
+    "status": 200,
+    "bytes": 757076,
+    "sha256": "1b6aaca2fe9f8b5f0e6afce87923123030eeca56b95453166e43a43efe019fb9",
+    "match": true
+  },
+  {
+    "name": "poses/xmasr-3.png",
+    "status": 200,
+    "bytes": 648537,
+    "sha256": "dd0c7f117e8518218bc33a595f7e5181945e3ebb77f8efeb583722d3985e1508",
+    "match": true
+  },
+  {
+    "name": "toris-coin-og.webp",
+    "status": 200,
+    "bytes": 43386,
+    "sha256": "2ca0c9e0fbf2db1b167ce28bab83fe82f824129440553b2fd8d712737d7c057f",
+    "match": true
+  },
+  {
+    "route": "/",
+    "status": 200,
+    "location": null
+  },
+  {
+    "route": "/coin/PEBR",
+    "status": 200,
+    "location": null
+  },
+  {
+    "route": "/coin/YETI",
+    "status": 200,
+    "location": null
+  },
+  {
+    "route": "/coin/XMASR",
+    "status": 200,
+    "location": null
+  },
+  {
+    "route": "/studio?coin=YETI",
+    "status": 200,
+    "location": null
+  },
+  {
+    "route": "/PEBR",
+    "status": 301,
+    "location": "/coin/PEBR"
+  },
+  {
+    "route": "/no-such-world",
+    "status": 404,
+    "location": null
+  }
+]
