@@ -1,6 +1,7 @@
 import { AnalyticsSettingsButton } from "./SiteAnalytics";
 import Link from "next/link";
 import { COLLECTION_X, CREATOR_URL } from "@/utils/coins";
+import { DonationSupport } from "./DonationSupport";
 
 export function Arrow({ diagonal = true }: { diagonal?: boolean }) {
   return (
@@ -60,6 +61,7 @@ export function CollectionFooter() {
           </a>
         </nav>
       </div>
+      <DonationSupport />
       <div className="collection-footer-bottom">
         <p>
           Meme tokens are speculative. You could lose everything you spend, and
